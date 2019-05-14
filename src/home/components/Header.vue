@@ -32,7 +32,7 @@ export default {
     line-height: 36px
     vertical-align: middle
     border-bottom: 1px solid #dfdfdf
-    width: 1366px
+    width: 1500px
     margin: 0 auto
     .left
       float left

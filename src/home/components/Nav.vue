@@ -10,18 +10,25 @@
             <li class="first"><a href="" class="title">关于我们</a></li>
         </ul>
     </div>
+    <div class="content">
+        <home-content></home-content>
+    </div>
 </div>
 </template>
 
 <script>
+import HomeContent from '@/common/content'
 export default {
   name: 'HomeNav',
+  components:{
+      HomeContent
+  }
 
 }
 </script>
 <style lang="stylus" scoped>
   .outnav
-    width: 1366px;
+    width: 1500px;
     margin 15px auto 0 auto;
     background: #404144;
     height: 50px;
@@ -34,7 +41,7 @@ export default {
         -webkit-margin-start: 0px;
         -webkit-margin-end: 0px;
         .category
-            width 225px
+            width 222px
             padding 0
             background #ff4a00
         .first

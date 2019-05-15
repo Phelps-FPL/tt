@@ -4,14 +4,20 @@
       <div class="innerPro">
           <div class="hotProduct">
               <h2><span class="el-icon-search"></span> 热门产品</h2>
-        <el-carousel indicator-position="outside" style="overflow:hidden">
-          <el-carousel-item >
-                    <ul class="ulList">
-                      <li  style="width:313px;float:left; display: block;" v-for="(item,id) in imgs" :key="id">
-                        <a href=""><img :src="item.url" alt="">
-                        </a>
+        <el-carousel :autoplay='false' indicator-position="outside" style="overflow:hidden">
+          <el-carousel-item v-for="item in List" :key="item" >                   
+                    <ul class="List"> 
+                        <li  style="width:313px;float:left; display: block;" v-for="i in item.imgs" :key="i">
+                          <div class="Pic">
+                        <a href=""><img :src="i.url" alt=""> </a>
+                        <h3><a href="" >{{i.num}}</a></h3>
+                        <p class="text">
+                          <i class="inner">{{i.text}}</i>
+                          </p>                      
+                         </div>
                         </li>
-                    </ul>
+                      </ul>
+                                        
           </el-carousel-item>
         </el-carousel>
             </div>
@@ -23,17 +29,34 @@
 <script>
 export default {
   name: "HomeProduct",
-  data () {
-      return {
-          
-              imgs:[{id:'0001',url:'../../../static/product/D7.png'},
-                {id:'0002',url:'../../../static/product/E7.png'},
-                {id:'0003',url:'../../../static/product/P6.png'},
-                {id:'0004',url:'../../../static/product/P7.png'},
-                ]
-        
-      }
-  }
+ data() {
+   return {
+     List:[{
+       id:'0001',
+       imgs:[{url:'../../../static/product/D7.png',num:'D7',text:'全屏触控，感受指尖的律动，更清晰更全面'},
+             {url:'../../../static/product/E7.png',num:'E7',text:'大屏显示,放松你的双眼,更宽的视觉效果,更好的视觉体验'},
+             {url:'../../../static/product/P6.png',num:'P6',text:'越夜越精彩，星光夜视智能后视镜'},
+             {url:'../../../static/product/P7.png',num:'P7',text:'星光夜视智能后视镜，星光璀璨，一见倾心'}]
+        },
+       {
+        id:'0002',
+        imgs:[{url:'../../../static/product/D7.png',num:'D8',text:'全屏触控，感受指尖的律动，更清晰更全面'},
+              {url:'../../../static/product/E7.png',num:'E7',text:'大屏显示,放松你的双眼,更宽的视觉效果,更好的视觉体验'},
+              {url:'../../../static/product/P6.png',num:'P6',text:'越夜越精彩，星光夜视智能后视镜'},
+              {url:'../../../static/product/P7.png',num:'P7',text:'星光夜视智能后视镜，星光璀璨，一见倾心'}
+        ]
+       },
+        {
+        id:'0003',
+        imgs:[{url:'../../../static/product/D7.png',num:'D7',text:'全屏触控，感受指尖的律动，更清晰更全面'},
+              {url:'../../../static/product/E7.png',num:'E7',text:'大屏显示,放松你的双眼,更宽的视觉效果,更好的视觉体验'},
+             {url:'../../../static/product/P6.png',num:'P6',text:'越夜越精彩，星光夜视智能后视镜'},
+             {url:'../../../static/product/P7.png',num:'P7',text:'星光夜视智能后视镜，星光璀璨，一见倾心'}
+             ]
+       },
+     ]
+   }
+ },
 };
 
 </script>
@@ -57,5 +80,18 @@ export default {
                   height 26px
                   vertical-align center
                   margin-right 3px
+            .Pic
+              text-align center
+              h3
+                margin-top 3px
+              .text
+                color #666
+                height 16px
+                .inner
+                  width 16em
+                  display inline-block
+
+
+</style>
 
 

@@ -1,21 +1,9 @@
-# company
+使用vue组件仿照写了个主页，用了element UI 插件。
 
-> test
+用了stylus语法
 
-## Build Setup
+每个模块拆分成组件
 
-``` bash
-# install dependencies
-npm install
+产品轮播轮播使用了二维数组
 
-# serve with hot reload at localhost:8080
-npm run dev
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

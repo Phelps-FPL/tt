@@ -16,6 +16,7 @@ export default {
   padding: 0;
   list-style-type: none;
   list-style: none
+
 }
 
 </style>
